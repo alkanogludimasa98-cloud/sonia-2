@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#170f25">
+  <meta name="description" content="Eine kleine Liebeserklärung, nur für Sonia. Von Dimas, mit ganzem Herzen. ❤️">
+  <title>Für Sonia ♡ – Für immer mein Lieblingsmensch</title>
+  <style>
+    :root {color-scheme:dark; --bg:#170f25;--ink:#fff9fc;--sub:#dacbdc;--rose:#ff92b5;--rose2:#ffbad0;--lav:#c1afff;--line:rgba(255,237,247,.17);--panel:rgba(255,255,255,.07)}
+    *,*::before,*::after{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;min-height:100vh;overflow-x:hidden;color:var(--ink);background:radial-gradient(ellipse at 15% 5%,#503254 0,transparent 36%),radial-gradient(ellipse at 88% 80%,#322852 0,transparent 40%),linear-gradient(140deg,#170f25 0%,#24152e 47%,#151022 100%);font-family:ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.55}
+    button{font:inherit;cursor:pointer}
+    button:focus-visible{outline:3px solid #ffd7a5;outline-offset:4px}
+    .ambient{position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.38;background-image:radial-gradient(#ffe9ff 1px,transparent 1.4px);background-size:44px 44px;mask-image:linear-gradient(to bottom,#000,transparent 90%)}
+    .glow{position:fixed;border-radius:50%;filter:blur(86px);opacity:.16;pointer-events:none;z-index:0;animation:float 9s ease-in-out infinite alternate}
+    .glow.a{background:#ff5e9d;width:260px;height:260px;left:-120px;top:15%}.glow.b{background:#a491ff;width:350px;height:350px;right:-140px;bottom:10%;animation-delay:-3s}
+    .shell{position:relative;z-index:1;max-width:1080px;margin:auto;min-height:100dvh;padding:22px 24px 60px;display:flex;flex-direction:column}
+    header{display:flex;gap:16px;justify-content:space-between;align-items:center;padding:4px 0 24px}
+    .brand{display:flex;align-items:center;gap:9px;letter-spacing:.13em;text-transform:uppercase;font-size:.78rem;font-weight:800;color:#ffe5f0;white-space:nowrap;flex-shrink:0}
+    .brand .seal{width:36px;height:36px;display:grid;place-items:center;border:1px solid #ffb8d2;border-radius:50%;font-size:1rem;color:#ffb8d2;letter-spacing:0;flex:0 0 36px}
+    .soundless{color:#d5bed0;font-size:.72rem;letter-spacing:.08em}
+    .track{display:flex;align-items:center;gap:8px}.dot{width:8px;height:8px;border-radius:10px;background:rgba(255,255,255,.24);transition:width .3s,background .3s}.dot.on{width:25px;background:#ffa4c1}
+    main{flex:1;display:flex;align-items:center;justify-content:center}
+    .scene{display:none;width:100%;animation:enter .55s both}.scene.active{display:block}
+    .center{text-align:center}.eyebrow{font-size:.74rem;font-weight:800;letter-spacing:.23em;text-transform:uppercase;color:#ffc7db;margin:0 0 18px}
+    h1,h2,h3,p{margin-top:0}h1,h2{font-family:Georgia,"Times New Roman",serif;font-weight:500;line-height:1.12;letter-spacing:-.035em}
+    h1{font-size:clamp(3.4rem,9vw,7.6rem);margin:0 auto 22px;max-width:900px}h2{font-size:clamp(2.55rem,6vw,4.45rem);margin:0 auto 18px;max-width:850px}
+    .script{font-style:italic;color:#ffb4ce}.shimmer{background:linear-gradient(100deg,#ffdfed,#ffc0d9 52%,#cab7ff);background-clip:text;color:transparent}
+    .lede{font-size:clamp(1.02rem,2vw,1.2rem);color:var(--sub);max-width:610px;margin:0 auto 32px;line-height:1.85}
+    .mini{font-size:.91rem;color:#cfbed1}.big-heart{font-size:4.5rem;line-height:1;margin:0 auto 23px;filter:drop-shadow(0 0 27px #fa86bb77);animation:beat 2.8s ease-in-out infinite}
+    .pill{display:inline-flex;justify-content:center;align-items:center;gap:10px;min-height:53px;border:0;border-radius:99px;background:linear-gradient(110deg,#ff91b6,#fbc7dc);color:#39142b;padding:12px 30px;font-weight:800;box-shadow:0 9px 38px #f87eab48;transition:transform .2s,filter .2s}
+    .pill:hover:not(:disabled){transform:translateY(-2px);filter:brightness(1.07)}.pill:disabled{opacity:.48;cursor:not-allowed;box-shadow:none}
+    .quiet{background:rgba(255,255,255,.07);color:#fff5fb;border:1px solid var(--line);box-shadow:none}
+    .scene-head{text-align:center;margin-bottom:32px}.scene-head .lede{margin-bottom:5px}
+    .paper{border:1px solid var(--line);background:linear-gradient(155deg,rgba(255,255,255,.1),rgba(255,255,255,.035));box-shadow:0 18px 80px #10081b58;border-radius:30px;backdrop-filter:blur(14px)}
+    .memory{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;max-width:820px;margin:26px auto 17px}
+    .memory button{min-height:152px;color:white;padding:17px;border:1px solid #ffffff35;border-radius:22px;background:linear-gradient(150deg,#4f2d51,#392446);position:relative;overflow:hidden;transition:transform .2s,background .25s}
+    .memory button:hover{transform:translateY(-3px)}.memory .front{display:grid;place-items:center;gap:6px;position:absolute;inset:10px;transition:opacity .2s}.memory .front span{font-size:2.5rem}.memory .front small{font-size:.76rem;letter-spacing:.12em;text-transform:uppercase;color:#f7cedf}
+    .memory .back{display:grid;place-items:center;position:absolute;inset:15px;font-family:Georgia,serif;font-size:clamp(1.05rem,2vw,1.33rem);line-height:1.35;opacity:0;transform:scale(.88);transition:opacity .25s,transform .25s}
+    .memory button.open{background:linear-gradient(140deg,#864361,#61436f);border-color:#ffb7d3}.memory button.open .front{opacity:0}.memory button.open .back{opacity:1;transform:scale(1)}
+    .controls{text-align:center;margin:23px 0 10px}.stat{text-align:center;color:#f5c6dc;font-weight:700;font-size:.92rem}
+    .game{max-width:790px;margin:24px auto 16px;position:relative;border-radius:27px;min-height:300px;overflow:hidden;background:radial-gradient(circle at 30% 30%,#81435e55,transparent 42%),linear-gradient(145deg,#34213d,#271c38);border:1px solid #ffffff2c;box-shadow:0 18px 75px #140c2155;touch-action:manipulation}
+    .game::before{content:'✦     ✧          ✦        ✧         ✦';white-space:pre;position:absolute;top:19px;left:8%;width:90%;color:#e3afca99;letter-spacing:1.8em;pointer-events:none}
+    .catch{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:85px;height:85px;border:0;border-radius:50%;background:radial-gradient(circle at 25% 25%,#ffe1ec,#ff9dc2);font-size:2.45rem;box-shadow:0 0 0 10px #ff9fc01f,0 10px 30px #ff76a347;transition:left .27s,top .27s,scale .16s}
+    .catch:active{scale:.87}.catch[hidden]{display:none}
+    .meter{height:11px;max-width:460px;margin:13px auto 12px;border-radius:30px;overflow:hidden;background:#ffffff2b}.meter>span{display:block;height:100%;width:0;background:linear-gradient(90deg,#ff7ca8,#ffd3e1);transition:width .3s;border-radius:inherit}
+    .reward{max-width:650px;margin:20px auto 0;color:#ffe3ee;text-align:center;font-family:Georgia,serif;font-style:italic;font-size:1.29rem;animation:enter .4s both}
+    .promise-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px;max-width:900px;margin:24px auto}
+    .promise{min-height:230px;border-radius:25px;border:1px solid #ffffff3b;background:linear-gradient(150deg,#473052aa,#3a2847b5);padding:23px 20px;text-align:center;color:#fff;transition:transform .2s,background .2s}
+    .promise:hover{transform:translateY(-3px)}.promise .emoji{font-size:2.5rem;display:block;margin:0 0 10px}.promise h3{font-family:Georgia,serif;font-size:1.42rem;font-weight:500;margin:0 0 11px}.promise .msg{display:none;font-size:.91rem;line-height:1.6;color:#f6dfed}.promise .tease{color:#dec4d5;font-size:.86rem}.promise.open{background:linear-gradient(150deg,#815075b5,#564267be);border-color:#f9b0d4}.promise.open .msg{display:block}.promise.open .tease{display:none}
+    .envelope-wrap{max-width:720px;margin:10px auto 30px;text-align:center}
+    .envelope{width:min(330px,85vw);height:210px;margin:15px auto 28px;background:linear-gradient(170deg,#f9bad1,#c981a8);border-radius:10px;position:relative;border:0;box-shadow:0 20px 65px #ee91b844;transition:transform .25s;display:grid;place-items:center;overflow:hidden}.envelope:hover{transform:translateY(-5px) rotate(-1deg)}
+    .envelope::before{content:'';position:absolute;inset:0;background:linear-gradient(145deg,transparent 49.6%,#e6a1bf 50%),linear-gradient(215deg,transparent 49.6%,#ffd0df 50%);background-size:50% 100%;background-repeat:no-repeat;background-position:left,right;opacity:.85}.envelope::after{content:'';position:absolute;width:100%;height:95%;top:-1px;background:#ffd5e3;clip-path:polygon(0 0,100% 0,50% 65%)}.envelope span{position:relative;z-index:2;display:grid;place-items:center;border-radius:50%;background:#8d416c;width:65px;height:65px;color:#fff;font-size:2rem;box-shadow:0 3px 8px #65304c65}
+    .letter{display:none;max-width:790px;margin:0 auto 25px;padding:clamp(25px,6vw,62px);background:linear-gradient(165deg,#fff5f5,#fce7ed);color:#57344b;border-radius:16px;box-shadow:0 18px 70px #0a081558;transform:rotate(-.35deg);text-align:left;animation:enter .65s both}
+    .letter.open{display:block}.letter .from{font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;font-weight:800;color:#a46983}.letter h3{font-family:Georgia,serif;font-size:clamp(2.3rem,6vw,3.7rem);font-weight:500;margin:12px 0 24px;color:#713d5e}.letter p{font-size:clamp(.98rem,2vw,1.12rem);line-height:1.9;margin:0 0 19px}.letter .sign{text-align:right;font-family:Georgia,serif;font-style:italic;font-size:1.45rem;margin:33px 0 0}
+    .end-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin:27px 0}
+    footer{text-align:center;font-size:.8rem;color:#cdb7cc;padding-top:33px}footer strong{color:#ffb5d0}
+    .burst{position:fixed;pointer-events:none;z-index:15;animation:fly var(--life,1.3s) ease-out forwards;font-size:var(--size,26px);filter:drop-shadow(0 0 5px #ff9db48a)}
+    .hidden{display:none!important}
+    @keyframes enter{from{opacity:0;transform:translateY(17px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes beat{0%,100%{transform:scale(1)}50%{transform:scale(1.09)}}
+    @keyframes float{from{transform:translateY(-18px)}to{transform:translateY(20px)}}
+    @keyframes fly{0%{opacity:1;transform:translate(-50%,-50%) scale(.5) rotate(0deg)}100%{opacity:0;transform:translate(calc(-50% + var(--dx)),calc(-50% + var(--dy))) scale(1.25) rotate(var(--rot))}}
+    @media(max-width:690px){.shell{padding:18px 16px 45px}header{padding-bottom:19px}.soundless{display:none}.brand{font-size:.71rem}.scene-head{margin-bottom:22px}h1{font-size:clamp(3.15rem,13.1vw,5rem)}.memory{gap:10px}.memory button{min-height:139px;padding:10px}.memory .back{inset:9px;font-size:clamp(.86rem,3.3vw,1.08rem)}.memory .front span{font-size:2rem}.memory .front small{font-size:.59rem}.promise-grid{grid-template-columns:1fr}.promise{min-height:unset;padding:22px}.game{min-height:330px}.letter{transform:none}.lede{line-height:1.65}}
+    @media(max-width:360px){.memory{grid-template-columns:repeat(2,1fr)}.track{gap:5px}.dot{width:6px;height:6px}.dot.on{width:18px}}
+    @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+  </style>
+</head>
+<body>
+<div class="ambient" aria-hidden="true"></div><div class="glow a" aria-hidden="true"></div><div class="glow b" aria-hidden="true"></div>
+<div class="shell">
+  <header>
+    <div class="brand"><span class="seal">♥</span> für dich, Sonia</div>
+    <span class="soundless">ein kleines Stück von meinem Herzen</span>
+    <div class="track" aria-label="Fortschritt"><span class="dot on"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+  </header>
+  <main>
+    <section class="scene active center" id="scene-0" aria-labelledby="intro-title">
+      <div class="big-heart" aria-hidden="true">💗</div>
+      <p class="eyebrow">Eine kleine Überraschung · Von Dimas</p>
+      <h1 id="intro-title">Für dich,<br><span class="shimmer">Sonia.</span> ♡</h1>
+      <p class="lede">Ich könnte dir tausendmal sagen, wie sehr ich dich liebe. Aber heute wollte ich es dir auf eine andere Art zeigen. Das hier ist nur für dich. Für das schönste Mädchen in meinem Leben.</p>
+      <button class="pill" id="start">Öffne mein Herz <span aria-hidden="true">→</span></button>
+      <p class="mini" style="margin-top:20px">Psst … es warten kleine Überraschungen auf dich. ✨</p>
+    </section>
+
+    <section class="scene" id="scene-1" aria-labelledby="mem-title">
+      <div class="scene-head"><p class="eyebrow">Kapitel 1 / 4 · Sechs kleine Wahrheiten</p><h2 id="mem-title">Was ich <span class="script">an dir liebe</span></h2><p class="lede">Tippe auf jedes Herz und entdecke, was du mir bedeutest.</p></div>
+      <div class="memory" id="memory">
+        <button type="button" aria-label="Liebesbotschaft 1 aufdecken"><span class="front"><span>💗</span><small>öffne mich</small></span><span class="back">Dein Lächeln macht meine dunkelsten Tage hell.</span></button>
+        <button type="button" aria-label="Liebesbotschaft 2 aufdecken"><span class="front"><span>💖</span><small>öffne mich</small></span><span class="back">Du bist mein Zuhause, egal wo wir gerade sind.</span></button>
+        <button type="button" aria-label="Liebesbotschaft 3 aufdecken"><span class="front"><span>💘</span><small>öffne mich</small></span><span class="back">Mit dir fühlen sich die kleinen Momente riesengroß an.</span></button>
+        <button type="button" aria-label="Liebesbotschaft 4 aufdecken"><span class="front"><span>💕</span><small>öffne mich</small></span><span class="back">Ich bewundere dein Herz und den Menschen, der du bist.</span></button>
+        <button type="button" aria-label="Liebesbotschaft 5 aufdecken"><span class="front"><span>💞</span><small>öffne mich</small></span><span class="back">Selbst ein gewöhnlicher Tag wird mit dir besonders.</span></button>
+        <button type="button" aria-label="Liebesbotschaft 6 aufdecken"><span class="front"><span>💝</span><small>öffne mich</small></span><span class="back">Und jeden Tag würde ich mich wieder für dich entscheiden.</span></button>
+      </div>
+      <p class="stat" id="memory-stat" aria-live="polite">0 von 6 Herzen geöffnet</p>
+      <div class="controls"><button class="pill" id="memory-next" disabled>Weiter zu unserem Spiel →</button></div>
+    </section>
+
+    <section class="scene" id="scene-2" aria-labelledby="game-title">
+      <div class="scene-head"><p class="eyebrow">Kapitel 2 / 4 · Ein kleines Spiel</p><h2 id="game-title">Fang mein <span class="script">Herz</span></h2><p class="lede">Du hast mein Herz längst erobert. Aber kannst du es noch siebenmal fangen? Tippe auf das springende Herz! 💕</p></div>
+      <div class="game" id="game" aria-label="Spielbereich, fange sieben Herzen"><button class="catch" id="catch" type="button" aria-label="Herz fangen">❤️</button></div>
+      <p class="stat" id="game-stat" aria-live="polite">0 von 7 Herzen gefangen</p><div class="meter"><span id="meter-bar"></span></div>
+      <p class="reward hidden" id="game-reward">Gewonnen! Aber eigentlich habe ich das größte Glück – weil ich dich habe. ♡</p>
+      <div class="controls"><button class="pill" id="game-next" disabled>Du hast gewonnen! Weiter →</button></div>
+    </section>
+
+    <section class="scene" id="scene-3" aria-labelledby="prom-title">
+      <div class="scene-head"><p class="eyebrow">Kapitel 3 / 4 · Mein Versprechen</p><h2 id="prom-title">Bei Sonne. Bei Regen. <span class="script">Bei allem.</span></h2><p class="lede">Das Leben wird nicht immer einfach. Aber was auch kommt – ich will es mit dir erleben. Öffne alle drei Versprechen.</p></div>
+      <div class="promise-grid" id="promises">
+        <button class="promise" type="button" aria-label="Versprechen für schöne Tage öffnen"><span class="emoji">☀️</span><h3>Unsere Höhen</h3><span class="tease">Tippe, um mein Versprechen zu lesen</span><span class="msg">Ich will mit dir lachen, Erinnerungen sammeln und die schönsten Momente feiern. Alles ist schöner, wenn ich es mit dir teilen darf.</span></button>
+        <button class="promise" type="button" aria-label="Versprechen für schwierige Tage öffnen"><span class="emoji">🌧️</span><h3>Unsere Tiefen</h3><span class="tease">Tippe, um mein Versprechen zu lesen</span><span class="msg">Und wenn es mal schwer wird, will ich nicht weglaufen. Ich möchte dir zuhören, mit dir reden, daraus lernen und mit dir gemeinsam weiterwachsen.</span></button>
+        <button class="promise" type="button" aria-label="Versprechen für die Zukunft öffnen"><span class="emoji">🌷</span><h3>Unsere Zukunft</h3><span class="tease">Tippe, um mein Versprechen zu lesen</span><span class="msg">Ich weiß nicht, was morgen kommt. Aber ich weiß, dass ich mir meine Zukunft mit dir wünsche – Hand in Hand, Schritt für Schritt.</span></button>
+      </div>
+      <p class="stat" id="promise-stat" aria-live="polite">0 von 3 Versprechen geöffnet</p>
+      <div class="controls"><button class="pill" id="promise-next" disabled>Ein letzter Brief wartet auf dich →</button></div>
+    </section>
+
+    <section class="scene center" id="scene-4" aria-labelledby="letter-title">
+      <p class="eyebrow">Kapitel 4 / 4 · Von Herzen</p><h2 id="letter-title">Das Wichtigste <span class="script">zum Schluss.</span></h2>
+      <p class="lede" id="letter-prompt">Sonia, das hier wollte ich dir schon immer auf genau diese Weise sagen. Dieser Brief gehört nur dir.</p>
+      <div class="envelope-wrap" id="envelope-wrap"><button class="envelope" id="open-letter" aria-label="Liebesbrief öffnen"><span>♥</span></button><p class="mini">Tippe auf den Umschlag, mein Amor. 💌</p></div>
+      <article class="letter" id="letter" aria-label="Liebesbrief von Dimas an Sonia">
+        <span class="from">Ein Brief von Dimas – nur für dich</span><h3>Meine Sonia, ♡</h3>
+        <p>Manchmal frage ich mich, wie ich so viel Glück haben konnte, dich in meinem Leben zu haben. Du bist nicht einfach nur meine Freundin. Du bist der Mensch, bei dem ich ich selbst sein kann, der mir so viel bedeutet und der mir das Gefühl gibt, angekommen zu sein.</p>
+        <p>Ich möchte, dass du niemals vergisst, wie <strong>unendlich dankbar ich für dich bin.</strong> Für dein Lächeln, deine Nähe, die Gespräche, unser Lachen und sogar die ganz normalen Tage. Allein, dass du da bist, ist für mich etwas Besonderes.</p>
+        <p>Ich weiß, dass nicht jeder Tag perfekt sein wird. Wir werden Höhen haben, an die wir uns für immer erinnern, und Tiefen, die uns herausfordern. Aber ich wünsche mir, dass wir auch dann füreinander da sind, uns verstehen wollen und niemals vergessen, warum wir uns lieben. Nicht, weil alles leicht ist – sondern weil du es für mich wert bist.</p>
+        <p><strong>Du bist die einzige Frau, mit der ich mein Leben teilen möchte.</strong> Wenn ich an Liebe denke, denke ich an dich. Wenn ich an schöne Erinnerungen denke, bist du darin. Und wenn ich mir die Zukunft ausmale, wünsche ich mir dich an meiner Seite.</p>
+        <p>Danke, dass es dich gibt. Danke, dass ich dich lieben darf. Ich kann dir nicht versprechen, immer perfekt zu sein. Aber ich verspreche dir, mir Mühe zu geben, zuzuhören und dir jeden Tag zu zeigen, wie wichtig du mir bist.</p>
+        <p><strong>Ich liebe dich über alles, Sonia. Ganz, ganz doll. Gestern, heute und an all den Tagen, die noch vor uns liegen. ❤️</strong></p>
+        <div class="sign">Für immer dein Dimas ♡</div>
+      </article>
+      <div class="end-actions hidden" id="end-actions"><button type="button" class="pill" id="kiss">Schick mir einen Kuss 💋</button><button type="button" class="pill quiet" id="replay">Noch einmal erleben ↺</button></div>
+      <p class="mini hidden" id="end-note">P.S.: Ganz egal, wie oft du das hier liest: Ich liebe dich. Immer ein bisschen mehr. 🥹💗</p>
+    </section>
+  </main>
+  <footer>Mit ganz viel Liebe gemacht · <strong>Dimas ♡ Sonia</strong></footer>
+</div>
+<script>
+  'use strict';
+  const $=id=>document.getElementById(id);
+  let step=0, caught=0;
+  const memoryButtons=[...document.querySelectorAll('#memory button')];
+  const promiseButtons=[...document.querySelectorAll('#promises button')];
+  function go(to){step=to;document.querySelectorAll('.scene').forEach((scene,i)=>{scene.classList.toggle('active',i===to);scene.setAttribute('aria-hidden',String(i!==to))});document.querySelectorAll('.dot').forEach((d,i)=>d.classList.toggle('on',i<=to));window.scrollTo({top:0,behavior:'smooth'});let title=document.querySelector('#scene-'+to+' h1, #scene-'+to+' h2');if(title){title.setAttribute('tabindex','-1');title.focus({preventScroll:true})}if(to===4)burst(window.innerWidth/2,window.innerHeight*.4,15)}
+  function burst(x,y,count=10){if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;const glyphs=['💕','💖','♥','✨','💗'];for(let i=0;i<count;i++){let e=document.createElement('span');e.className='burst';e.textContent=glyphs[Math.floor(Math.random()*glyphs.length)];e.style.left=x+'px';e.style.top=y+'px';e.style.setProperty('--dx',(Math.random()*340-170)+'px');e.style.setProperty('--dy',(-70-Math.random()*290)+'px');e.style.setProperty('--rot',(Math.random()*110-55)+'deg');e.style.setProperty('--size',(15+Math.random()*20)+'px');e.style.setProperty('--life',(1.05+Math.random()*.9)+'s');document.body.append(e);e.addEventListener('animationend',()=>e.remove(),{once:true})}}
+  $('start').addEventListener('click',()=>go(1));
+  memoryButtons.forEach(btn=>btn.addEventListener('click',()=>{if(btn.classList.contains('open'))return;btn.classList.add('open');btn.setAttribute('aria-pressed','true');const total=document.querySelectorAll('#memory button.open').length;$('memory-stat').textContent=total+' von 6 Herzen geöffnet';burst(innerWidth/2,innerHeight/2,4);if(total===6){$('memory-next').disabled=false;$('memory-stat').textContent='Alle sechs Herzen geöffnet. Jedes davon gehört dir! 💕'}}));
+  $('memory-next').addEventListener('click',()=>go(2));
+  $('catch').addEventListener('click',ev=>{caught++;$('game-stat').textContent=caught+' von 7 Herzen gefangen';$('meter-bar').style.width=(caught/7*100)+'%';const r=ev.currentTarget.getBoundingClientRect();burst(r.left+r.width/2,r.top+r.height/2,6);if(caught===7){$('catch').hidden=true;$('game-next').disabled=false;$('game-reward').classList.remove('hidden');$('game-stat').textContent='7 von 7 – und mein Herz gehört dir sowieso!';return}let x=15+Math.random()*70,y=20+Math.random()*58;$('catch').style.left=x+'%';$('catch').style.top=y+'%'});
+  $('game-next').addEventListener('click',()=>go(3));
+  promiseButtons.forEach(btn=>btn.addEventListener('click',()=>{if(btn.classList.contains('open'))return;btn.classList.add('open');btn.setAttribute('aria-expanded','true');const total=document.querySelectorAll('#promises button.open').length;$('promise-stat').textContent=total+' von 3 Versprechen geöffnet';if(total===3){$('promise-next').disabled=false;$('promise-stat').textContent='Drei Versprechen. Ein Mensch. Du. ♡'}burst(innerWidth/2,innerHeight/2,5)}));
+  $('promise-next').addEventListener('click',()=>go(4));
+  $('open-letter').addEventListener('click',()=>{$('envelope-wrap').classList.add('hidden');$('letter-prompt').classList.add('hidden');$('letter').classList.add('open');$('end-actions').classList.remove('hidden');$('end-note').classList.remove('hidden');burst(innerWidth/2,innerHeight/2,28);$('letter').scrollIntoView({behavior:'smooth',block:'start'})});
+  $('kiss').addEventListener('click',()=>{burst(innerWidth/2,innerHeight/2,35);$('kiss').textContent='Kuss angekommen! 💋❤️'});
+  $('replay').addEventListener('click',()=>{memoryButtons.forEach(b=>{b.classList.remove('open');b.removeAttribute('aria-pressed')});promiseButtons.forEach(b=>{b.classList.remove('open');b.removeAttribute('aria-expanded')});$('memory-stat').textContent='0 von 6 Herzen geöffnet';$('memory-next').disabled=true;caught=0;$('game-stat').textContent='0 von 7 Herzen gefangen';$('meter-bar').style.width='0';$('catch').hidden=false;$('catch').style.left='50%';$('catch').style.top='50%';$('game-reward').classList.add('hidden');$('game-next').disabled=true;$('promise-stat').textContent='0 von 3 Versprechen geöffnet';$('promise-next').disabled=true;$('envelope-wrap').classList.remove('hidden');$('letter-prompt').classList.remove('hidden');$('letter').classList.remove('open');$('end-actions').classList.add('hidden');$('end-note').classList.add('hidden');$('kiss').textContent='Schick mir einen Kuss 💋';go(0)});
+</script>
+</body>
+</html>
